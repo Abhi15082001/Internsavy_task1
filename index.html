@@ -21,15 +21,18 @@
         <script>
             function sendEmail(){
                 Email.send({
-                    Host : "smtp.elasticemail.com",
+                    Host : "smtp.gmail.com",
                     Username : "akxyz311@gmail.com",
-                    Password : "552946F69474BBE6AC79A5FB5F1815E58DAD",
+                    Password : "ezpxonhrclqdattx",
                     To : 'abhi.kushawah32@gmail.com',
                     From : document.getElementById("email").value,
-                    Subject : "This is the subject",
-                    Body : "And this is the body"
+                    Subject : "New enquiry form",
+                    Body :  "Name:" +document.getElementById("name").value
+                            +"<br>Email:" +document.getElementById("email").value
+                            +"<br> Phone no:" +document.getElementById("phone").value
+                            +"<br>Message:" +document.getElementById("message").value
 }).then(
-  message => alert(message)
+  message => alert("Your message was recorded successfuly")
 );
             }
         </script>
